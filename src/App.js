@@ -23,7 +23,7 @@ function App() {
     fetch(`/api/signinguest`, {credentials: 'include', method: 'POST'})
       .then((response) => response.json())
       .then((data) => {
-        login(data.username,data.password)
+        setTimeout(login(data.username,data.password),500);
       })
   }
 
